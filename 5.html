@@ -1,0 +1,101 @@
+<!-- The lists are basically of two types-
+
+Ordered lists (ol)
+<ol>
+
+          <li>This is the first item of my unordered list</li>
+
+</ol>
+Unordered lists (ul)
+<ul>
+
+          <li>This is the first item if my unordered list</li>
+
+</ul>
+The difference between an ordered and an unordered list is that the ordered list displays the list in this format -
+
+1.
+
+2.
+
+3.
+
+….
+
+On the other hand, the unordered lists display the list in the following format-
+
+.
+.
+.
+Both the lists have more than one attribute which we can write using the type command. For example, if we write:
+
+<ol type= “I”>
+ Then we will get the lists as I, II, III, and so on. In the same format, we can also get the lists as A, B, C, and so on.
+
+This applies on unordered lists also. If we write
+
+<ul type= “square”>
+Then we will get a bulleted square instead of a circle. -->
+
+<!-- A table is just a combination of rows and columns on a webpage. The structure of the table looks like-
+The main part is the table tag, and it consists of two parts: the table head and table body. The <thead> consists of the main head of the table and <tbody> consists of the body of the table. 
+
+    <tr> is used to justify that it is the part of a row. Inside the <tr> tag, we give the headings of a row under the <th> tag. 
+        n a table, there are mostly two things to remember, the head and the body of a table. To add more rows to the table, we can simply add a <tr> tag and add any number of rows in a table.
+
+            I believe you have understood clearly what the lists and tables are. Tables and lists are two primary components of a website that helps in making it more attractive.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables and Lists</title>
+</head>
+<body>
+    <!-- Lists -->
+    <ul type="disc">
+        <li>This is first item of my unordered list</li>
+        <li>This is second item of my unordered list</li>
+        <ul>
+            <li>Another one</li>
+            <li>Another two</li>
+            <li>Another three</li>
+        </ul>
+
+        <li>This is third item of my unordered list</li>
+    </ul>
+    <ol type="A">
+        <li>This is first item of my ordered list</li>
+        <li>This is second item of my ordered list</li>
+        <li>This is third item of my ordered list</li>
+    </ol>
+    <!-- Tables -->
+     <h3>HTML Tables</h3>
+     <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Employee Id</th>
+                <th>Employee Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ananya</td>
+                <td>12345</td>
+                <td>Programmer</td>
+            </tr>
+            <tr>
+            <td> Ananya</td>
+            <td> 67890</td>
+            <td>Web Developer</td>
+        </tr>
+            <tr>
+                <td> Shubham </td>
+                <td> 7564 </td>
+                <td> Android Developer </td>
+            </tr>
+        </tbody>
+     </table>
+</body>
+</html>

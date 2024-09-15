@@ -1,0 +1,118 @@
+<!-- The position of the box is set to be relative so that we can move it within our webpage.
+
+For making our animation, we need to start by giving the animation-name. -->
+<!-- The next property used is animation-duration. It is used to decide how long our animation will run. The last property is animation-iteration-count. It is used to decide the number of times the animation will run. -->
+<!-- The keyframes are used to make the animation. From and to are used to decide how the animation will move in the webpage. In the above example, we are moving the animation harry 1 from 200px to 1400px. These types of animations are used to design scroll bars or progress bars on the webpage.
+
+There are some other properties also to customize the animations like-
+
+animation-fill-mode:
+If we want to keep the last property applied to the animation then we can set the animation-fill-property as forward as follows-
+
+animation-fill-mode: forward;
+animation-timing-function:
+We can define this property with three different values-
+
+ease-in
+After applying this, the animation will start slowly and becomes fast towards the end.
+
+ease-out
+After applying this, the animation will begin fastly and become slow towards the end.
+
+ease-in-out
+After applying this, the animation will start slowly, then become fast in the midway, and ends slowly.
+
+
+animation-delay
+It is used to define the time after which the animation will start.
+
+animation-delay: 3s;
+animation-direction:
+This property is used to define the direction of the animation. For example, if we select it as reverse, it will move the animation in reverse direction.
+
+animation-direction: reverse;
+There is another method of creating animation apart from keyframes. For this, we will give the name as harry2.
+
+  @keyframes harry2 {
+        0%{
+            top:0px;
+            left:0px;
+        }
+        25%{
+            top: 250px;
+            left: 0px;
+        }
+        75%{top: 250px;
+            left: 250px;
+        }
+        100%{
+            top: 0px;
+            left: 250px;
+        }
+        
+    } -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes and Animations</title>
+    <style>
+        .container {
+        background-color: greenyellow;
+    }
+    .box {
+        background-color: green;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        animation-name: harry1;
+        animation-duration: 5s;
+        animation-iteration-count: 5;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-delay: 3s;
+        animation-direction: alternate;
+        /* These properties can be set using this shorthand */
+        /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode; */
+        /* animation: harry 5s ease-in 1s 12 backwards; */
+
+    }
+    @keyframes harry2 {
+        0%{
+            top:0px;
+            left:0px;
+        }
+        25%{
+            top: 250px;
+            left: 0px;
+        }
+        75%{
+            top: 250px;
+            left: 250px;
+        }
+        100%{
+            top: 0px;
+            left: 250px;
+        }
+        
+    }
+    @keyframes harry1{
+        from{
+width: 200px
+        }
+        to{
+width: 1400px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+</html>

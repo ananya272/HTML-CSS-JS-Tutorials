@@ -1,0 +1,66 @@
+<!-- An HTML event can be something the browser does or something a user does.
+
+Here are some examples of HTML events:
+
+An HTML web page has finished loading
+An HTML input field was changed
+An HTML button was clicked
+Often, when events happen, you may want to do something.
+
+JavaScript lets you execute code when events are detected.
+
+HTML allows event handler attributes, with JavaScript code, to be added to HTML elements. -->
+<!-- Here is a list of some common HTML events-
+
+Onchange-  An HTML element has been changed
+Onclick- The user clicks an HTML element
+Onmouseover-   The user moves the mouse over an HTML element
+Onmouseout-The user moves the mouse away from an HTML element
+Onkeydown- The user pushes a keyboard key
+Onload- The browser has finished loading the page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+<style>
+    #btn{
+        padding: 10px 14px;
+        background-color: red;
+        border: 2px solid black;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, odio unde. Officia, molestiae, neque recusandae unde asperiores ullam commodi voluptate aliquam debitis velit excepturi modi dolorum optio eveniet minima tempore inventore. Earum nihil ea, itaque sequi quas dicta officiis soluta modi accusamus dolorem esse rerum provident officia et? Aliquid officiis voluptate inventore, nostrum sunt qui ipsa eum, neque omnis ullam nihil autem delectus eveniet perspiciatis esse cumque velit accusamus tenetur ad nisi labore. Quaerat possimus enim esse autem culpa eveniet assumenda quos dolores incidunt totam velit rerum vitae perspiciatis earum, voluptas, laudantium, dolore ipsum quam tenetur. Quasi in dolorum nobis natus assumenda quis? Voluptatum, numquam tenetur? Dolore, consequuntur animi. Eos repellat quis velit nobis molestiae alias quod tenetur dolorum, necessitatibus voluptates delectus vel a omnis adipisci, quisquam explicabo. Voluptatum culpa, quae dignissimos earum incidunt eaque praesentium quia odio mollitia, commodi aut unde ut, saepe eum provident. Animi in harum voluptates odit rem praesentium officiis cum soluta commodi culpa nam obcaecati quibusdam, reiciendis dolorum facere vitae quam iusto nisi ducimus. Deserunt minima est esse odit, eius tempore dolorum a quo asperiores, iure similique inventore fugit nesciunt praesentium sed debitis explicabo necessitatibus assumenda? Dolor, recusandae tempore corporis nemo omnis accusamus, possimus modi qui mollitia fuga repellendus autem quis tempora tenetur odio alias voluptate dolores quos assumenda suscipit nostrum, placeat iure hic. Qui omnis doloribus provident architecto id dolorum, corporis nisi excepturi eum minus incidunt perferendis.</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <script>
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run(){
+            console.log('Mouse Inside')
+            // alert('Mouse Inside')
+        });
+        para.addEventListener('mouseout', function run(){
+            console.log('Mouse now went outside')
+        });
+        function toggleHide(){
+        // let btn = document.getElementById('btn');
+        let para = document.getElementById('para');
+        if(para.style.display != 'none'){
+            para.style.display = 'none';
+        }
+        else{
+            para.style.display = 'block';
+        }
+        }
+    </script>
+</body>
+</html>
